@@ -160,18 +160,10 @@ section {
 
 .section__pic-container {
     display: flex;
-    height: 500px;
-    width: 500px;
+    height: 400px;
+    width: 400px;
     margin: auto 0;
-    
 }
-
-.profile-pic {
-    height: 800px; /* Desired height */
-    width: 800px; /* Adjust width to maintain aspect ratio */
-    object-fit: contain; /* Ensures the full image is visible without cropping */
-}
-
 .section__text {
     align-self: center;
     text-align: center;
@@ -254,7 +246,7 @@ section {
     gap: 1rem
 }
 
-/* ABOU SECTION */
+/* ABOUT SECTION */
 #about {
     position: relative;
 }
@@ -278,6 +270,7 @@ section {
 
 .about-pic {
     border-radius: 2rem;
+
 }
 
 .arrow{
@@ -363,8 +356,8 @@ article .icon {
 
 .project-img {
     border-radius: 2rem;
-    width: 90%;
-    height: 90%;
+    width: 80%;
+    height: 80%;
 }
 
 .project-title {
