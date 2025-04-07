@@ -1,8 +1,30 @@
 /* GENERAL */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
-
-
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0s;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Optional dark layer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  
 * {
  margin: 0;
  padding: 0;
@@ -175,11 +197,17 @@ section {
 
 .section__text__p1 {
     text-align: center;
+    color: #fff;
+}
+.section__text__p3 {
+    text-align: center;
+    color: #000;
 }
 
 .section__text__p2 {
    font-size: 1.75rem;
    margin-bottom: 1rem; 
+   color: #fff;
 }
 .title {
     font-size: 3rem;
