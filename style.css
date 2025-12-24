@@ -749,3 +749,26 @@
                 grid-template-columns: repeat(2, 1fr);
             }
         }
+        .concepts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.concept-card {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.concept-card:hover {
+    transform: translateY(-6px);
+}
+
+.concept-card h3 {
+    margin-bottom: 10px;
+    color: var(--primary);
+}
