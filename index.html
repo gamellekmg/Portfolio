@@ -7,19 +7,27 @@
     <title>Gamelle Kamga - Software Engineer Student </title>
     <link rel="stylesheet" href="./style.css" />
 
+</head>
+
 <body>
     <nav id="navbar">
         <div class="nav-container">
             <div class="logo">Gamelle <span>Kamga</span></div>
             <ul class="nav-links">
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#about" class="nav-link" data-i18n="nav.about">About</a></li>
+                <li><a href="#skills" class="nav-link" data-i18n="nav.skills">Skills</a></li>
+                <li><a href="#experience" class="nav-link" data-i18n="nav.experience">Experience</a></li>
+                <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
             </ul>
+            <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch to French">
+                Français
+            </button>
+
         </div>
     </nav>
+  
+
 
     <section class="hero">
         <div class="hero-carousel">
@@ -39,8 +47,8 @@
         <div class="hero-content">
             <div class="hero-logo">GK</div>
             <h1>Gamelle Kamga</h1>
-            <p class="hero-subtitle">Full-Stack Software Engineer</p>
-            <p class="hero-subtitle">Student</p>
+            <p class="hero-subtitle" data-i18n="hero.subtitle1">Full-Stack Software Engineer</p>
+            <p class="hero-subtitle" data-i18n="hero.subtitle2">Student</p>
 
             <div class="cta-buttons">
                 <a href="#contact" class="btn btn-primary">
@@ -48,15 +56,17 @@
                         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                         <polyline points="22,6 12,13 2,6"></polyline>
                     </svg>
-                    Let's Connect
+                    <span data-i18n="hero.cta.contact">Let's Connect</span>
                 </a>
-                <a href="./assets/updated cv.pdf" class="btn btn-secondary" download>
+                <a href="./assets/GAMELLE MEGANTCHE cv.pdf" class="btn btn-secondary" download id="cvDownload"
+                    data-cv-en="./assets/GAMELLE MEGANTCHE cv.pdf"
+                    data-cv-fr="./assets/GAMELLE MEGANTCHE fr.pdf">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                         <polyline points="7 10 12 15 17 10"></polyline>
                         <line x1="12" y1="15" x2="12" y2="3"></line>
                     </svg>
-                    Download CV
+                    <span data-i18n="hero.cta.download">Download CV</span>
                 </a>
             </div>
             <div class="social-links">
@@ -78,12 +88,12 @@
 
     <section id="about">
         <div class="section-header">
-            <p class="section-tag">Introduction</p>
-            <h2 class="section-title">About Me</h2>
+            <p class="section-tag" data-i18n="about.tag">Introduction</p>
+            <h2 class="section-title" data-i18n="about.title">About Me</h2>
         </div>
         <div class="about-content">
-            <p class="about-text">
-                I’m a problem solver who works with both logic and heart. I love creating things that not only work well
+            <p class="about-text" data-i18n="about.p1">
+                I am a problem solver who works with both logic and heart. I love creating things that not only work well
                 but also help people in real life.
                 As a bilingual student (English and French) in software engineering, I have learned to stay calm and
                 organized even when life gets busy. During my last term, I managed a part-time internship, my university
@@ -96,24 +106,24 @@
 
 
             </p>
-            <p class="about-text">
+            <p class="about-text" data-i18n="about.p2">
                 I believe that technology should be human, and that empathy, kindness, and good communication make a
-                real difference in any team. I’m someone who likes to laugh, share ideas, and always bring good energy
+                real difference in any team. I am someone who likes to laugh, share ideas, and always bring good energy
                 to my work.
-                If you’re looking for someone who can code carefully and care deeply, I’d love to work with you.
+                If you are looking for someone who can code carefully and care deeply, I would love to work with you.
             </p>
             <div class="about-stats">
                 <div class="stat-box">
                     <div class="stat-number">2+</div>
-                    <div class="stat-label">Years Experience</div>
+                    <div class="stat-label" data-i18n="about.stats.years">Years Experience</div>
                 </div>
                 <div class="stat-box">
                     <div class="stat-number">10+</div>
-                    <div class="stat-label">Technologies</div>
+                    <div class="stat-label" data-i18n="about.stats.tech">Technologies</div>
                 </div>
                 <div class="stat-box">
                     <div class="stat-number">5</div>
-                    <div class="stat-label">Co-op Terms & Internships</div>
+                    <div class="stat-label" data-i18n="about.stats.coops">Co-op Terms & Internships</div>
                 </div>
             </div>
         </div>
@@ -121,8 +131,8 @@
 
     <section id="skills" style="background: var(--light-gray);">
         <div class="section-header">
-            <p class="section-tag">Expertise</p>
-            <h2 class="section-title">Technical Skills</h2>
+            <p class="section-tag" data-i18n="skills.tag">Expertise</p>
+            <h2 class="section-title" data-i18n="skills.title">Technical Skills</h2>
         </div>
         <div class="skills-grid">
             <div class="skill-circle" data-percent="92">
@@ -230,11 +240,11 @@
     <section id="concepts">
         <div class="section-header">
 
-            <h2 class="section-title">Engineering Concepts & Technical Knowledge</h2>
+            <h2 class="section-title" data-i18n="concepts.title">Engineering Concepts & Technical Knowledge</h2>
         </div>
 
         <div class="about-content">
-            <p class="about-text">
+            <p class="about-text" data-i18n="concepts.p1">
                 Beyond tools and programming languages, I have developed a strong understanding of core software
                 engineering
                 concepts through my academic training and personal projects. I enjoy learning how systems behave, how
@@ -244,48 +254,48 @@
 
             <div class="concepts-grid">
                 <div class="concept-card">
-                    <h3>Software Design & Analysis</h3>
-                    <p>
+                    <h3 data-i18n="concepts.design.title">Software Design & Analysis</h3>
+                    <p data-i18n="concepts.design.text">
                         Requirement analysis, understanding epics and user stories, translating functional needs into
                         technical solutions, and reasoning about system behavior before implementation.
                     </p>
                 </div>
 
                 <div class="concept-card">
-                    <h3>Testing & Validation</h3>
-                    <p>
+                    <h3 data-i18n="concepts.testing.title">Testing & Validation</h3>
+                    <p data-i18n="concepts.testing.text">
                         Understanding of test cases, test scenarios, edge cases, and validation strategies to ensure
                         software behaves as expected and meets specifications.
                     </p>
                 </div>
 
                 <div class="concept-card">
-                    <h3>Problem Solving & Debugging</h3>
-                    <p>
+                    <h3 data-i18n="concepts.debugging.title">Problem Solving & Debugging</h3>
+                    <p data-i18n="concepts.debugging.text">
                         Logical reasoning, step by step debugging, identifying root causes, and proposing alternative
                         solutions when initial approaches do not work.
                     </p>
                 </div>
 
                 <div class="concept-card">
-                    <h3>Automation & Scripting</h3>
-                    <p>
+                    <h3 data-i18n="concepts.automation.title">Automation & Scripting</h3>
+                    <p data-i18n="concepts.automation.text">
                         Writing scripts to automate repetitive tasks, simplify workflows, and support testing or data
                         processing activities.
                     </p>
                 </div>
 
                 <div class="concept-card">
-                    <h3>Distributed Systems Concepts</h3>
-                    <p>
+                    <h3 data-i18n="concepts.distributed.title">Distributed Systems Concepts</h3>
+                    <p data-i18n="concepts.distributed.text">
                         Basic understanding of client server communication, APIs, RPC based communication such as gRPC,
                         and how services interact in modern systems.
                     </p>
                 </div>
 
                 <div class="concept-card">
-                    <h3>Networking Fundamentals</h3>
-                    <p>
+                    <h3 data-i18n="concepts.networking.title">Networking Fundamentals</h3>
+                    <p data-i18n="concepts.networking.text">
                         Foundational knowledge of networking concepts such as TCP IP communication and basic routing
                         ideas
                         studied during coursework.
@@ -293,16 +303,16 @@
                 </div>
 
                 <div class="concept-card">
-                    <h3>Machine Learning Awareness</h3>
-                    <p>
+                    <h3 data-i18n="concepts.ml.title">Machine Learning Awareness</h3>
+                    <p data-i18n="concepts.ml.text">
                         Conceptual understanding of machine learning principles including data driven models, training,
                         evaluation, and practical limitations, with interest in applying them through hands on learning.
                     </p>
                 </div>
 
                 <div class="concept-card">
-                    <h3>Collaboration & Communication</h3>
-                    <p>
+                    <h3 data-i18n="concepts.communication.title">Collaboration & Communication</h3>
+                    <p data-i18n="concepts.communication.text">
                         Ability to ask questions, explain ideas clearly, document problems and solutions, and contribute
                         actively within a small development team.
                     </p>
@@ -314,16 +324,16 @@
 
     <section id="experience">
         <div class="section-header">
-            <p class="section-tag">Career Path</p>
-            <h2 class="section-title">Experience</h2>
+            <p class="section-tag" data-i18n="experience.tag">Career Path</p>
+            <h2 class="section-title" data-i18n="experience.title">Experience</h2>
         </div>
         <div class="timeline">
             <div class="timeline-item">
                 <div class="timeline-content">
                     <div class="timeline-date">May – Aug 2025</div>
-                    <h3>Software Developer CO-OP</h3>
-                    <h4>University of Ottawa</h4>
-                    <p>Built bilingual scholarship database with advanced CMS, implementing sophisticated search
+                    <h3 data-i18n="experience.item1.title">Software Developer CO-OP</h3>
+                    <h4 data-i18n="experience.item1.org">University of Ottawa</h4>
+                    <p data-i18n="experience.item1.desc">Built bilingual scholarship database with advanced CMS, implementing sophisticated search
                         algorithms and automated validation systems.</p>
                 </div>
                 <div class="timeline-dot"></div>
@@ -332,9 +342,9 @@
             <div class="timeline-item">
                 <div class="timeline-content">
                     <div class="timeline-date">Feb – Mar 2025</div>
-                    <h3>Software Developer & Team Lead (Internship)</h3>
-                    <h4>Wouessi</h4>
-                    <p>Led backend optimization with Node.js and MongoDB, developed responsive React interfaces, managed
+                    <h3 data-i18n="experience.item2.title">Software Developer & Team Lead (Internship)</h3>
+                    <h4 data-i18n="experience.item2.org">Wouessi</h4>
+                    <p data-i18n="experience.item2.desc">Led backend optimization with Node.js and MongoDB, developed responsive React interfaces, managed
                         technical initiatives for performance improvements.</p>
                 </div>
                 <div class="timeline-dot"></div>
@@ -343,9 +353,9 @@
             <div class="timeline-item">
                 <div class="timeline-content">
                     <div class="timeline-date">Sep – Dec 2024</div>
-                    <h3>Software Developer CO-OP</h3>
-                    <h4>Immigration & Refugee Board</h4>
-                    <p>Optimized data processing solutions using TypeScript and SQL, enhanced system performance through
+                    <h3 data-i18n="experience.item3.title">Software Developer CO-OP</h3>
+                    <h4 data-i18n="experience.item3.org">Immigration & Refugee Board</h4>
+                    <p data-i18n="experience.item3.desc">Optimized data processing solutions using TypeScript and SQL, enhanced system performance through
                         pattern analysis and code reviews.</p>
                 </div>
                 <div class="timeline-dot"></div>
@@ -354,9 +364,9 @@
             <div class="timeline-item">
                 <div class="timeline-content">
                     <div class="timeline-date">Jan – Aug 2024</div>
-                    <h3>IT Support Analyst CO-OP and Part-time</h3>
-                    <h4>Immigration & Refugee Board</h4>
-                    <p>Resolved complex technical issues through systematic troubleshooting, managed secure database
+                    <h3 data-i18n="experience.item4.title">IT Support Analyst CO-OP and Part-time</h3>
+                    <h4 data-i18n="experience.item4.org">Immigration & Refugee Board</h4>
+                    <p data-i18n="experience.item4.desc">Resolved complex technical issues through systematic troubleshooting, managed secure database
                         configurations and system performance optimization.</p>
                 </div>
                 <div class="timeline-dot"></div>
@@ -366,8 +376,8 @@
 
     <section id="projects" style="background: var(--light-gray);">
         <div class="section-header">
-            <p class="section-tag">Portfolio</p>
-            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-tag" data-i18n="projects.tag">Portfolio</p>
+            <h2 class="section-title" data-i18n="projects.title">Featured Projects</h2>
         </div>
         <div class="projects-grid">
             <div class="project-card">
@@ -380,9 +390,9 @@
                     </svg>
                 </div>
                 <div class="project-info">
-                    <h3>CEPAP – Educational Dashboard (In Progress)</h3>
+                    <h3 data-i18n="projects.cepap.title">CEPAP – Educational Dashboard (In Progress)</h3>
                     <p class="project-tech">HTML • CSS • JavaScript • PostgreSQL • Express.js • Node.js</p>
-                    <p>Here's my first ongoing project under AG Code & Design for an educational organization. An
+                    <p data-i18n="projects.cepap.desc">Here is my first ongoing project under AG Code & Design for an educational organization. An
                         educational dashboard to organize and share teaching materials. File upload/download, category
                         sorting, and user sign-in are already functional. Upcoming features include an admin dashboard
                         to view event registrations, an event list for teachers, and support for uploading presentation
@@ -393,7 +403,7 @@
                                 stroke-width="2">
                                 <polygon points="5 3 19 12 5 21 5 3"></polygon>
                             </svg>
-                            Demo
+                            <span data-i18n="buttons.demo">Demo</span>
                         </a>
                         <a href="assets/cepap.pdf" class="project-btn" target="_blank">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -404,7 +414,7 @@
                                 <line x1="16" y1="17" x2="8" y2="17"></line>
                                 <polyline points="10 9 9 9 8 9"></polyline>
                             </svg>
-                            Dev Report
+                            <span data-i18n="buttons.devReport">Dev Report</span>
                         </a>
                     </div>
                 </div>
@@ -420,11 +430,11 @@
                     </svg>
                 </div>
                 <div class="project-info">
-                    <h3>UYP-PMS – Pharmacy Prescription Management System</h3>
+                    <h3 data-i18n="projects.uyp.title">UYP-PMS – Pharmacy Prescription Management System</h3>
                     <p class="project-tech">
                         Angular • NestJS • PostgreSQL • Prisma • Docker • Docker Compose
                     </p>
-                    <p>
+                    <p data-i18n="projects.uyp.desc">
                         A full-stack web application designed to simulate real-world pharmacy prescription workflows.
                         The system supports role-based access (Admin, Pharmacist, Assistant), secure user
                         authentication,
@@ -438,7 +448,7 @@
                                 stroke-width="2">
                                 <polygon points="5 3 19 12 5 21 5 3"></polygon>
                             </svg>
-                            Demo
+                            <span data-i18n="buttons.demo">Demo</span>
                         </a>
                         <a href="assets/Technical Report – UYP-PMS.pdf" class="project-btn" target="_blank">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -449,7 +459,7 @@
                                 <line x1="16" y1="17" x2="8" y2="17"></line>
                                 <polyline points="10 9 9 9 8 9"></polyline>
                             </svg>
-                            Technical Report
+                            <span data-i18n="buttons.techReport">Technical Report</span>
                         </a>
                     </div>
                 </div>
@@ -467,16 +477,18 @@
                     </svg>
                 </div>
                 <div class="project-info">
-                    <h3>Skylens – Aircraft Conflict Detection Tool</h3>
+                    <h3 data-i18n="projects.skylens.title">Skylens – Aircraft Conflict Detection Tool</h3>
                     <p class="project-tech">React • NestJS • TypeScript • Algorithm Design • Simulation</p>
-                    <p>
+                    <p data-i18n-html="projects.skylens.desc">
                         Built during the NAV CANADA-sponsored challenge at the uOttaHack 8 hackathon, Skylens is a
                         real-time simulation tool designed to detect and visualize potential mid-air aircraft conflicts
                         based on flight trajectory data. The goal was to explore ways technology could support air
                         traffic safety by detecting risks before they become emergencies.
                         <br><br>
-                        I was responsible for developing the core algorithm that processes aircraft positions, altitude, speed, and heading
-                        to identify when two or more flights enter a potential conflict zone. With our team, we  implemented the
+                        I was responsible for developing the core algorithm that processes aircraft positions, altitude,
+                        speed, and heading
+                        to identify when two or more flights enter a potential conflict zone. With our team, we
+                        implemented the
                         solution with a React front-end and NestJS backend to make the logic interactive and clear. The
                         final prototype was presented to NAV CANADA mentors and received positive feedback for its
                         simplicity and practical use.
@@ -489,7 +501,7 @@
                                 <polyline points="15 3 21 3 21 9"></polyline>
                                 <line x1="10" y1="14" x2="21" y2="3"></line>
                             </svg>
-                            Demo
+                            <span data-i18n="buttons.demo">Demo</span>
                         </a>
                         <a href="https://heaps-city-59348599.figma.site/" class="project-btn" target="_blank">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -498,7 +510,7 @@
                                 <polyline points="15 3 21 3 21 9"></polyline>
                                 <line x1="10" y1="14" x2="21" y2="3"></line>
                             </svg>
-                            Figma Problem Overview
+                            <span data-i18n="buttons.figmaOverview">Figma Problem Overview</span>
                         </a>
                     </div>
                 </div>
@@ -514,9 +526,9 @@
                     </svg>
                 </div>
                 <div class="project-info">
-                    <h3>Novigrad: Service Management App</h3>
+                    <h3 data-i18n="projects.novigrad.title">Novigrad: Service Management App</h3>
                     <p class="project-tech">Java • Firebase • Android • Real-time</p>
-                    <p>Android application with real-time updates and user authentication. An administrator manage the
+                    <p data-i18n="projects.novigrad.desc">Android application with real-time updates and user authentication. An administrator manage the
                         platform by adding or deleting services, removing employees. Employees can sign up or log in to
                         offer their own services on the platform.</p>
                     <div class="project-links">
@@ -525,7 +537,7 @@
                                 stroke-width="2">
                                 <polygon points="5 3 19 12 5 21 5 3"></polygon>
                             </svg>
-                            Demo
+                            <span data-i18n="buttons.demo">Demo</span>
                         </a>
                     </div>
                 </div>
@@ -543,9 +555,9 @@
                     </svg>
                 </div>
                 <div class="project-info">
-                    <h3>GlamHair Website</h3>
+                    <h3 data-i18n="projects.glamhair.title">GlamHair Website</h3>
                     <p class="project-tech">HTML • CSS • JavaScript • React • Responsive • Bootstrap</p>
-                    <p>An online wig store that allows customers to browse and buy wigs, book consultations, and get
+                    <p data-i18n="projects.glamhair.desc">An online wig store that allows customers to browse and buy wigs, book consultations, and get
                         care tips for their hair extensions and wigs. The website also includes guidance on how to
                         install, maintain, and style their wigs.</p>
                     <div class="project-links">
@@ -556,7 +568,7 @@
                                 <polyline points="15 3 21 3 21 9"></polyline>
                                 <line x1="10" y1="14" x2="21" y2="3"></line>
                             </svg>
-                            Live
+                            <span data-i18n="buttons.live">Live</span>
                         </a>
                     </div>
                 </div>
@@ -571,9 +583,9 @@
                     </svg>
                 </div>
                 <div class="project-info">
-                    <h3>AG Code&Design (In Progress)</h3>
+                    <h3 data-i18n="projects.ag.title">AG Code&Design (In Progress)</h3>
                     <p class="project-tech">HTML • CSS • JavaScript • PHP</p>
-                    <p>A small web studio created to help individuals and small businesses build a real online presence.
+                    <p data-i18n="projects.ag.desc">A small web studio created to help individuals and small businesses build a real online presence.
                         The goal is to make websites that are clear, easy to use, and reflect the identity of each
                         client. The project focuses on simple design, smooth navigation, and responsive layouts so
                         anyone can access the site on any device.</p>
@@ -585,7 +597,7 @@
                                 <polyline points="15 3 21 3 21 9"></polyline>
                                 <line x1="10" y1="14" x2="21" y2="3"></line>
                             </svg>
-                            Live
+                            <span data-i18n="buttons.live">Live</span>
                         </a>
                     </div>
                 </div>
@@ -635,8 +647,8 @@
 
     <section id="contact">
         <div class="section-header">
-            <p class="section-tag">Get In Touch</p>
-            <h2 class="section-title">Contact Me</h2>
+            <p class="section-tag" data-i18n="contact.tag">Get In Touch</p>
+            <h2 class="section-title" data-i18n="contact.title">Contact Me</h2>
         </div>
         <div class="contact-grid">
             <div class="contact-card">
@@ -644,9 +656,9 @@
                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                     <polyline points="22,6 12,13 2,6"></polyline>
                 </svg>
-                <h3>Email</h3>
+                <h3 data-i18n="contact.email.title">Email</h3>
                 <a href="mailto:gmega010@uottawa.ca">gmega010@uottawa.ca</a>
-                <p class="contact-label">Response within 24h</p>
+                <p class="contact-label" data-i18n="contact.email.label">Response within 24h</p>
             </div>
             <div class="contact-card">
                 <svg class="contact-icon" viewBox="0 0 24 24">
@@ -654,106 +666,32 @@
                     <rect x="2" y="9" width="4" height="12"></rect>
                     <circle cx="4" cy="4" r="2"></circle>
                 </svg>
-                <h3>LinkedIn</h3>
-                <a href="https://www.linkedin.com/in/gamellekamga/" target="_blank">Connect with me</a>
-                <p class="contact-label">Professional network</p>
+                <h3 data-i18n="contact.linkedin.title">LinkedIn</h3>
+                <a href="https://www.linkedin.com/in/gamellekamga/" target="_blank" data-i18n="contact.linkedin.link">Connect with me</a>
+                <p class="contact-label" data-i18n="contact.linkedin.label">Professional network</p>
             </div>
             <div class="contact-card">
                 <svg class="contact-icon" viewBox="0 0 24 24">
                     <circle cx="12" cy="12" r="10"></circle>
                     <polyline points="12 6 12 12 16 14"></polyline>
                 </svg>
-                <h3>Availability</h3>
-                <a href="#contact">Open to Opportunities</a>
-                <p class="contact-label">Co-op, Part-time & Full-time roles</p>
+                <h3 data-i18n="contact.availability.title">Availability</h3>
+                <a href="#contact" data-i18n="contact.availability.link">Open to Opportunities</a>
+                <p class="contact-label" data-i18n="contact.availability.label">Co-op, Part-time & Full-time roles</p>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Gamelle Kamga. Crafted with passion and precision.</p>
+        <p data-i18n="footer.text">&copy; 2025 Gamelle Kamga. Crafted with passion and precision.</p>
     </footer>
 
-    <script>
-        // Carousel
-        const slides = document.querySelectorAll('.carousel-slide');
-        let currentSlide = 0;
+    <script src="./script.js"></script>
 
-        function nextSlide() {
-            slides[currentSlide].classList.remove('active');
-            currentSlide = (currentSlide + 1) % slides.length;
-            slides[currentSlide].classList.add('active');
-        }
 
-        setInterval(nextSlide, 4000);
 
-        // Navbar
-        window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            navbar.classList.toggle('scrolled', window.scrollY > 50);
 
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('.nav-link');
 
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (scrollY >= (sectionTop - 200)) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').slice(1) === current) {
-                    link.classList.add('active');
-                }
-            });
-        });
-
-        // Skill circles
-        const skillObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const circle = entry.target;
-                    const percent = circle.dataset.percent;
-                    const progress = 440 - (440 * percent) / 100;
-
-                    circle.querySelector('.circle-progress').style.strokeDashoffset = progress;
-                    circle.classList.add('animate');
-                    skillObserver.unobserve(circle);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        document.querySelectorAll('.skill-circle').forEach(circle => {
-            skillObserver.observe(circle);
-        });
-
-        // Timeline
-        const timelineObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('slide-in');
-                }
-            });
-        }, { threshold: 0.2 });
-
-        document.querySelectorAll('.timeline-item').forEach(item => {
-            timelineObserver.observe(item);
-        });
-
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-    </script>
 </body>
 
 </html>
